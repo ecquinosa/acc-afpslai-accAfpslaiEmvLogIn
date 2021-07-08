@@ -14,10 +14,10 @@ namespace accAfpslaiEmvLogIn
         //    this.branchIssue = pBranchIssue;
         //    this.msgHeader = pMsgHeader;
         //}
-        public LogIN(accAfpslaiEmvObjct.MiddleServerApi msa)
+        public LogIN(accAfpslaiEmvObjct.MiddleServerApi pMsa)
         {
             InitializeComponent();
-            this.msa = msa;
+            msa = pMsa;
         } 
 
         public bool IsSuccess = false;
@@ -25,8 +25,8 @@ namespace accAfpslaiEmvLogIn
         //public string apiKey = "";
         //public string branchIssue = "";
         //public string msgHeader = "";
-        public accAfpslaiEmvObjct.user dcsUser = null;
-        public accAfpslaiEmvObjct.MiddleServerApi msa = null;
+        public static accAfpslaiEmvObjct.user dcsUser = null;
+        public static accAfpslaiEmvObjct.MiddleServerApi msa = null;
 
         private void LogIN_Load(object sender, EventArgs e)
         {
@@ -77,7 +77,17 @@ namespace accAfpslaiEmvLogIn
             //accAfpslaiEmvObjct.MiddleServerApi 
             //if (msa == null) msa = new accAfpslaiEmvObjct.MiddleServerApi(baseUrl, apiKey, branchIssue, accAfpslaiEmvObjct.MiddleServerApi.afpslaiEmvSystem.login);
             var response = msa.ValidateLogIn(txtUsername.Text, txtPassword.Text);
-            if (response) dcsUser = msa.dcsUser;
+            if (response)
+            {
+                dcsUser = msa.dcsUser;
+                if (dcsUser.isChangePassword)
+                {
+                    ChangePassword cp = new ChangePassword();
+                    cp.ShowDialog();
+                    response = cp.isPasswordChanged;
+                    if (!response) accAfpslaiEmvObjct.Utilities.ShowWarningMessage("User failed to change password");
+                }
+            }
 
             return response;
         }

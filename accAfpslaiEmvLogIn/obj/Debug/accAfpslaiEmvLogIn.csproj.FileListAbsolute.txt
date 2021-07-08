@@ -28,3 +28,20 @@ D:\WORK\Projects\acc-afpslai-accAfpslaiEmvLogIn\accAfpslaiEmvLogIn\obj\Debug\acc
 D:\WORK\Projects\acc-afpslai-accAfpslaiEmvLogIn\accAfpslaiEmvLogIn\obj\Debug\accAfpslaiEmvLogIn.csproj.CopyComplete
 D:\WORK\Projects\acc-afpslai-accAfpslaiEmvLogIn\accAfpslaiEmvLogIn\obj\Debug\accAfpslaiEmvLogIn.dll
 D:\WORK\Projects\acc-afpslai-accAfpslaiEmvLogIn\accAfpslaiEmvLogIn\obj\Debug\accAfpslaiEmvLogIn.pdb
+C:\Drive D\acc-afpslai-accAfpslaiEmvLogIn\accAfpslaiEmvLogIn\bin\Debug\accAfpslaiEmvLogIn.dll
+C:\Drive D\acc-afpslai-accAfpslaiEmvLogIn\accAfpslaiEmvLogIn\bin\Debug\accAfpslaiEmvLogIn.pdb
+C:\Drive D\acc-afpslai-accAfpslaiEmvLogIn\accAfpslaiEmvLogIn\bin\Debug\accAfpslaiEmvObjct.dll
+C:\Drive D\acc-afpslai-accAfpslaiEmvLogIn\accAfpslaiEmvLogIn\bin\Debug\Newtonsoft.Json.dll
+C:\Drive D\acc-afpslai-accAfpslaiEmvLogIn\accAfpslaiEmvLogIn\bin\Debug\accAfpslaiEmvEncDec.dll
+C:\Drive D\acc-afpslai-accAfpslaiEmvLogIn\accAfpslaiEmvLogIn\bin\Debug\accAfpslaiEmvObjct.pdb
+C:\Drive D\acc-afpslai-accAfpslaiEmvLogIn\accAfpslaiEmvLogIn\bin\Debug\Newtonsoft.Json.xml
+C:\Drive D\acc-afpslai-accAfpslaiEmvLogIn\accAfpslaiEmvLogIn\bin\Debug\accAfpslaiEmvEncDec.pdb
+C:\Drive D\acc-afpslai-accAfpslaiEmvLogIn\accAfpslaiEmvLogIn\obj\Debug\accAfpslaiEmvLogIn.csproj.AssemblyReference.cache
+C:\Drive D\acc-afpslai-accAfpslaiEmvLogIn\accAfpslaiEmvLogIn\obj\Debug\accAfpslaiEmvLogIn.ChangePassword.resources
+C:\Drive D\acc-afpslai-accAfpslaiEmvLogIn\accAfpslaiEmvLogIn\obj\Debug\accAfpslaiEmvLogIn.LogIN.resources
+C:\Drive D\acc-afpslai-accAfpslaiEmvLogIn\accAfpslaiEmvLogIn\obj\Debug\accAfpslaiEmvLogIn.Properties.Resources.resources
+C:\Drive D\acc-afpslai-accAfpslaiEmvLogIn\accAfpslaiEmvLogIn\obj\Debug\accAfpslaiEmvLogIn.csproj.GenerateResource.cache
+C:\Drive D\acc-afpslai-accAfpslaiEmvLogIn\accAfpslaiEmvLogIn\obj\Debug\accAfpslaiEmvLogIn.csproj.CoreCompileInputs.cache
+C:\Drive D\acc-afpslai-accAfpslaiEmvLogIn\accAfpslaiEmvLogIn\obj\Debug\accAfpslaiEmvLogIn.csproj.CopyComplete
+C:\Drive D\acc-afpslai-accAfpslaiEmvLogIn\accAfpslaiEmvLogIn\obj\Debug\accAfpslaiEmvLogIn.dll
+C:\Drive D\acc-afpslai-accAfpslaiEmvLogIn\accAfpslaiEmvLogIn\obj\Debug\accAfpslaiEmvLogIn.pdb
