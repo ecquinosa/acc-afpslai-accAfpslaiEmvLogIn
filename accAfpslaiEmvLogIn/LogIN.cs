@@ -6,21 +6,27 @@ namespace accAfpslaiEmvLogIn
 {
     public partial class LogIN : Form
     {
-        public LogIN(string pBaseUrl, string pApiKey, string pBranchIssue, string pMsgHeader)
+        //public LogIN(string pBaseUrl, string pApiKey, string pBranchIssue, string pMsgHeader)
+        //{
+        //    InitializeComponent();
+        //    this.baseUrl = pBaseUrl;
+        //    this.apiKey = pApiKey;
+        //    this.branchIssue = pBranchIssue;
+        //    this.msgHeader = pMsgHeader;
+        //}
+        public LogIN(accAfpslaiEmvObjct.MiddleServerApi msa)
         {
             InitializeComponent();
-            this.baseUrl = pBaseUrl;
-            this.apiKey = pApiKey;
-            this.branchIssue = pBranchIssue;
-            this.msgHeader = pMsgHeader;
-        }
+            this.msa = msa;
+        } 
 
         public bool IsSuccess = false;
-        public string baseUrl = "";
-        public string apiKey = "";
-        public string branchIssue = "";
-        public string msgHeader = "";
-        public accAfpslaiEmvObjct.user dcsUser = null;          
+        //public string baseUrl = "";
+        //public string apiKey = "";
+        //public string branchIssue = "";
+        //public string msgHeader = "";
+        public accAfpslaiEmvObjct.user dcsUser = null;
+        public accAfpslaiEmvObjct.MiddleServerApi msa = null;
 
         private void LogIN_Load(object sender, EventArgs e)
         {
@@ -50,16 +56,6 @@ namespace accAfpslaiEmvLogIn
             }
         }
 
-        
-
-        public static string HashEncryptString(string s)
-        {
-            System.Security.Cryptography.MD5CryptoServiceProvider Hasher = new System.Security.Cryptography.MD5CryptoServiceProvider();
-	        byte[] clearBytes = System.Text.Encoding.UTF8.GetBytes(s);
-	        byte[] hashedBytes = Hasher.ComputeHash(clearBytes);
-	        return Convert.ToBase64String(hashedBytes);
-        }
-
         private void Login()
         {
             IsSuccess = true;
@@ -78,7 +74,8 @@ namespace accAfpslaiEmvLogIn
 
         private bool ValidateLogIN_AFPSLAI()
         {
-            accAfpslaiEmvObjct.MiddleServerApi msa = new accAfpslaiEmvObjct.MiddleServerApi(baseUrl, apiKey, branchIssue, accAfpslaiEmvObjct.MiddleServerApi.afpslaiEmvSystem.login);
+            //accAfpslaiEmvObjct.MiddleServerApi 
+            //if (msa == null) msa = new accAfpslaiEmvObjct.MiddleServerApi(baseUrl, apiKey, branchIssue, accAfpslaiEmvObjct.MiddleServerApi.afpslaiEmvSystem.login);
             var response = msa.ValidateLogIn(txtUsername.Text, txtPassword.Text);
             if (response) dcsUser = msa.dcsUser;
 
