@@ -6,25 +6,15 @@ namespace accAfpslaiEmvLogIn
 {
     public partial class LogIN : Form
     {
-        //public LogIN(string pBaseUrl, string pApiKey, string pBranchIssue, string pMsgHeader)
-        //{
-        //    InitializeComponent();
-        //    this.baseUrl = pBaseUrl;
-        //    this.apiKey = pApiKey;
-        //    this.branchIssue = pBranchIssue;
-        //    this.msgHeader = pMsgHeader;
-        //}
+        
         public LogIN(accAfpslaiEmvObjct.MiddleServerApi pMsa)
         {
             InitializeComponent();
             msa = pMsa;
+            if(msa!=null)linkLabel1.Text = msa.baseUrl;
         } 
 
-        public bool IsSuccess = false;
-        //public string baseUrl = "";
-        //public string apiKey = "";
-        //public string branchIssue = "";
-        //public string msgHeader = "";
+        public bool IsSuccess = false;      
         public static accAfpslaiEmvObjct.user dcsUser = null;
         public static accAfpslaiEmvObjct.MiddleServerApi msa = null;
 
@@ -73,23 +63,29 @@ namespace accAfpslaiEmvLogIn
         }       
 
         private bool ValidateLogIN_AFPSLAI()
-        {
-            //accAfpslaiEmvObjct.MiddleServerApi 
-            //if (msa == null) msa = new accAfpslaiEmvObjct.MiddleServerApi(baseUrl, apiKey, branchIssue, accAfpslaiEmvObjct.MiddleServerApi.afpslaiEmvSystem.login);
-            var response = msa.ValidateLogIn(txtUsername.Text, txtPassword.Text);
-            if (response)
+        {            
+            if (msa != null)
             {
-                dcsUser = msa.dcsUser;
-                if (dcsUser.isChangePassword)
+                var response = msa.ValidateLogIn(txtUsername.Text, txtPassword.Text);
+                if (response)
                 {
-                    ChangePassword cp = new ChangePassword();
-                    cp.ShowDialog();
-                    response = cp.isPasswordChanged;
-                    if (!response) accAfpslaiEmvObjct.Utilities.ShowWarningMessage("User failed to change password");
+                    dcsUser = msa.dcsUser;
+                    if (dcsUser.isChangePassword)
+                    {
+                        ChangePassword cp = new ChangePassword();
+                        cp.ShowDialog();
+                        response = cp.isPasswordChanged;
+                        if (!response) accAfpslaiEmvObjct.Utilities.ShowWarningMessage("User failed to change password");
+                    }
                 }
-            }
 
-            return response;
+                return response;
+            }
+            else
+            {
+                accAfpslaiEmvObjct.Utilities.ShowWarningMessage("Failed to load api object");
+                return false;
+            }            
         }
        
     }

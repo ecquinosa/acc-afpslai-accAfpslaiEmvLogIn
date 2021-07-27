@@ -37,6 +37,7 @@
             this.lblResult = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // btnLogin
@@ -129,12 +130,24 @@
             this.panel1.Size = new System.Drawing.Size(355, 64);
             this.panel1.TabIndex = 23;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(1, 189);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(91, 17);
+            this.linkLabel1.TabIndex = 24;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "API SOURCE";
+            // 
             // LogIN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(504, 207);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblResult);
             this.Controls.Add(this.panel2);
@@ -165,5 +178,6 @@
         private System.Windows.Forms.Panel panel2;
         internal System.Windows.Forms.Label lblResult;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
