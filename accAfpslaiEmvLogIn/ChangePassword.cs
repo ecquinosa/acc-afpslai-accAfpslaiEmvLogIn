@@ -18,17 +18,22 @@ namespace accAfpslaiEmvLogIn
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            if (txtOldPassword.Text == "" || txtNewPassword.Text == "") accAfpslaiEmvObjct.Utilities.ShowWarningMessage("Please enter value in empty field(s)");
+            if (txtOldPassword.Text == "" || txtNewPassword.Text == "" || txtConfirmPass.Text == "") accAfpslaiEmvObjct.Utilities.ShowWarningMessage("Please enter value in empty field(s)");
             else
             {
-                //if (accAfpslaiEmvObjct.Utilities.IsPasswordValid(txtNewPassword.Text))
-                //{
+                if (txtNewPassword.Text != txtConfirmPass.Text) accAfpslaiEmvObjct.Utilities.ShowWarningMessage("New and Confirm passwords are not identical");
+                else
+                {
+                    //if (accAfpslaiEmvObjct.Utilities.IsPasswordValid(txtNewPassword.Text))
+                    //{
                     if (LogIN.msa.changeUserPassword(LogIN.dcsUser.userId, txtOldPassword.Text, txtNewPassword.Text))
                     {
+                        LogIN.dcsUser.userPass = LogIN.msa.dcsUser.userPass;
                         isPasswordChanged = true;
                         Close();
                     }
-                //}
+                    //}
+                }
             }
         }
 
@@ -36,6 +41,7 @@ namespace accAfpslaiEmvLogIn
         {
             txtOldPassword.Clear();
             txtNewPassword.Clear();
+            txtConfirmPass.Clear();
             txtOldPassword.Focus();
         }
     }

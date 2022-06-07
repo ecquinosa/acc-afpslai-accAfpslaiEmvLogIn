@@ -87,6 +87,11 @@ namespace accAfpslaiEmvLogIn
                 return false;
             }            
         }
-       
+
+        private void label2_DoubleClick(object sender, EventArgs e)
+        {
+            txtUsername.Text = "admin";
+            txtPassword.Text = "afPsL@ieMv2021";
+        }
     }
 }

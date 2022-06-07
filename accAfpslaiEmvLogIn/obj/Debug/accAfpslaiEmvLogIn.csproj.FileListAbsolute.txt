@@ -47,3 +47,6 @@ C:\Drive D\acc-afpslai-accAfpslaiEmvLogIn\accAfpslaiEmvLogIn\obj\Debug\accAfpsla
 C:\Drive D\acc-afpslai-accAfpslaiEmvLogIn\accAfpslaiEmvLogIn\obj\Debug\accAfpslaiEmvLogIn.pdb
 D:\WORK\Projects\acc-afpslai-accAfpslaiEmvLogIn\accAfpslaiEmvLogIn\obj\Debug\accAfpslaiEmvLogIn.ChangePassword.resources
 D:\WORK\Projects\acc-afpslai-accAfpslaiEmvLogIn\accAfpslaiEmvLogIn\obj\Debug\accAfpslaiEmvLogIn.Properties.Resources.resources
+D:\WORK\Projects\acc-afpslai-accAfpslaiEmvLogIn\accAfpslaiEmvLogIn\bin\Debug\System.Net.Http.Formatting.dll
+D:\WORK\Projects\acc-afpslai-accAfpslaiEmvLogIn\accAfpslaiEmvLogIn\bin\Debug\accAfpslaiEmvObjct.dll.config
+D:\WORK\Projects\acc-afpslai-accAfpslaiEmvLogIn\accAfpslaiEmvLogIn\bin\Debug\System.Net.Http.Formatting.xml

@@ -38,16 +38,21 @@ namespace accAfpslaiEmvLogIn
             this.btnReset = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.btnSubmit = new System.Windows.Forms.Button();
+            this.txtConfirmPass = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtNewPassword
             // 
             this.txtNewPassword.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNewPassword.Location = new System.Drawing.Point(154, 57);
+            this.txtNewPassword.Location = new System.Drawing.Point(216, 57);
             this.txtNewPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtNewPassword.Name = "txtNewPassword";
             this.txtNewPassword.PasswordChar = '@';
-            this.txtNewPassword.Size = new System.Drawing.Size(247, 25);
+            this.txtNewPassword.Size = new System.Drawing.Size(249, 25);
             this.txtNewPassword.TabIndex = 11;
             // 
             // label1
@@ -65,11 +70,11 @@ namespace accAfpslaiEmvLogIn
             // txtOldPassword
             // 
             this.txtOldPassword.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOldPassword.Location = new System.Drawing.Point(154, 23);
+            this.txtOldPassword.Location = new System.Drawing.Point(216, 23);
             this.txtOldPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtOldPassword.Name = "txtOldPassword";
             this.txtOldPassword.PasswordChar = '@';
-            this.txtOldPassword.Size = new System.Drawing.Size(247, 25);
+            this.txtOldPassword.Size = new System.Drawing.Size(249, 25);
             this.txtOldPassword.TabIndex = 10;
             // 
             // Label10
@@ -89,7 +94,7 @@ namespace accAfpslaiEmvLogIn
             this.btnReset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReset.ImageIndex = 1;
             this.btnReset.ImageList = this.imageList1;
-            this.btnReset.Location = new System.Drawing.Point(18, 116);
+            this.btnReset.Location = new System.Drawing.Point(18, 141);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(107, 41);
             this.btnReset.TabIndex = 14;
@@ -110,7 +115,7 @@ namespace accAfpslaiEmvLogIn
             this.btnSubmit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSubmit.ImageIndex = 0;
             this.btnSubmit.ImageList = this.imageList1;
-            this.btnSubmit.Location = new System.Drawing.Point(131, 116);
+            this.btnSubmit.Location = new System.Drawing.Point(131, 141);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(107, 41);
             this.btnSubmit.TabIndex = 15;
@@ -119,11 +124,68 @@ namespace accAfpslaiEmvLogIn
             this.btnSubmit.UseVisualStyleBackColor = true;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
+            // txtConfirmPass
+            // 
+            this.txtConfirmPass.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirmPass.Location = new System.Drawing.Point(216, 95);
+            this.txtConfirmPass.Margin = new System.Windows.Forms.Padding(4);
+            this.txtConfirmPass.Name = "txtConfirmPass";
+            this.txtConfirmPass.PasswordChar = '@';
+            this.txtConfirmPass.Size = new System.Drawing.Size(249, 25);
+            this.txtConfirmPass.TabIndex = 16;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DimGray;
+            this.label2.Location = new System.Drawing.Point(22, 97);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(169, 18);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Confirm new password";
+            // 
+            // label41
+            // 
+            this.label41.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label41.Location = new System.Drawing.Point(467, 26);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(18, 22);
+            this.label41.TabIndex = 570;
+            this.label41.Text = "* ";
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label3.Location = new System.Drawing.Point(467, 60);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(18, 22);
+            this.label3.TabIndex = 571;
+            this.label3.Text = "* ";
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label4.Location = new System.Drawing.Point(467, 95);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(18, 22);
+            this.label4.TabIndex = 572;
+            this.label4.Text = "* ";
+            // 
             // ChangePassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(454, 169);
+            this.ClientSize = new System.Drawing.Size(507, 192);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label41);
+            this.Controls.Add(this.txtConfirmPass);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.txtNewPassword);
@@ -149,5 +211,10 @@ namespace accAfpslaiEmvLogIn
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.ImageList imageList1;
+        internal System.Windows.Forms.TextBox txtConfirmPass;
+        internal System.Windows.Forms.Label label2;
+        internal System.Windows.Forms.Label label41;
+        internal System.Windows.Forms.Label label3;
+        internal System.Windows.Forms.Label label4;
     }
 }
